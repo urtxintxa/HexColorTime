@@ -89,7 +89,7 @@ public class Wallpaper extends WallpaperService{
                     paint.setTypeface(getTypeface());
                     paint.setAntiAlias(true);
                     paint.setTextAlign(Paint.Align.CENTER);
-                    paint.setTextSize(Integer.parseInt("200"));
+                    paint.setTextSize(TextSizePreference.getValue());
                     paint.setColor(Color.WHITE);
 
                     int xPos = (canvas.getWidth() / 2);

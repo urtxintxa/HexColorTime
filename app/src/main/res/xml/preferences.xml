@@ -18,6 +18,9 @@
             android:entries="@array/textTypefaces"
             android:entryValues="@array/textTypefacesValues"/>
 
+        <com.eneko.hexcolortimewallpaper.TextSizePreference
+            android:title="Text Size"/>
+
         <Preference
             android:key="applyWallpaper"
             android:title="Apply!"/>
