@@ -1,5 +1,6 @@
 package com.eneko.hexcolortimewallpaper;
 
+import android.annotation.SuppressLint;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -7,7 +8,6 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.service.wallpaper.WallpaperService;
-import android.util.Log;
 import android.view.SurfaceHolder;
 
 import java.text.DateFormat;
@@ -16,7 +16,7 @@ import java.util.Calendar;
 
 public class Wallpaper extends WallpaperService{
 
-    Paint paint;
+    private Paint paint;
 
     @Override
     public Engine onCreateEngine() {
@@ -35,12 +35,6 @@ public class Wallpaper extends WallpaperService{
             }
         };
         private boolean visible = true;
-
-        @Override
-        public void onCreate(SurfaceHolder surfaceHolder) {
-
-            super.onCreate(surfaceHolder);
-        }
 
         @Override
         public void onVisibilityChanged(boolean visible) {
@@ -90,7 +84,6 @@ public class Wallpaper extends WallpaperService{
                     paint.setAntiAlias(true);
                     paint.setTextAlign(Paint.Align.CENTER);
                     paint.setTextSize(TextSizePreference.getValue());
-                    paint.setColor(Color.WHITE);
 
                     int xPos = (canvas.getWidth() / 2);
                     int yPos = (int) ((canvas.getHeight() / 2) - ((paint.descent() + paint.ascent()) / 2)) ;
@@ -113,10 +106,21 @@ public class Wallpaper extends WallpaperService{
         }
 
         private String getTimeColor(Calendar ca) {
-            return "#" +
-                    String.format("%02d", ca.get(Calendar.HOUR_OF_DAY)) +
-                    String.format("%02d", ca.get(Calendar.MINUTE)) +
-                    String.format("%02d", ca.get(Calendar.SECOND));
+            boolean invertColor = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("invertColor", false);
+            if(invertColor) {
+                paint.setColor(Color.BLACK);
+                return "#" +
+                        String.format("%02x", 255 - ca.get(Calendar.HOUR_OF_DAY)) +
+                        String.format("%02x", 255 - ca.get(Calendar.MINUTE)) +
+                        String.format("%02x", 255 - ca.get(Calendar.SECOND));
+            }
+            else{
+                paint.setColor(Color.WHITE);
+                return "#" +
+                        String.format("%02d", ca.get(Calendar.HOUR_OF_DAY)) +
+                        String.format("%02d", ca.get(Calendar.MINUTE)) +
+                        String.format("%02d", ca.get(Calendar.SECOND));
+            }
         }
 
         private String getTimeText(Calendar ca) {
@@ -126,7 +130,10 @@ public class Wallpaper extends WallpaperService{
                 return df.format(Calendar.getInstance().getTime());
             }
             else {
-                return getTimeColor(ca);
+                return "#" +
+                        String.format("%02d", ca.get(Calendar.HOUR_OF_DAY)) +
+                        String.format("%02d", ca.get(Calendar.MINUTE)) +
+                        String.format("%02d", ca.get(Calendar.SECOND));
             }
         }
 
@@ -145,7 +152,6 @@ public class Wallpaper extends WallpaperService{
                 case 5:
                     return Typeface.SERIF;
             }
-
         }
     }
 }

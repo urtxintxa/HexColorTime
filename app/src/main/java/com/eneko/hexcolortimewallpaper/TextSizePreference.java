@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class TextSizePreference extends DialogPreference{
 
-    protected static int seekBarValue;
+    private static int seekBarValue;
 
     public TextSizePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -20,10 +20,10 @@ public class TextSizePreference extends DialogPreference{
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
         if(restoreValue) {
-            this.seekBarValue = getPersistedInt(seekBarValue);
+            seekBarValue = getPersistedInt(seekBarValue);
         }
         else {
-            this.seekBarValue = (Integer) defaultValue;
+            seekBarValue = (Integer) defaultValue;
         }
     }
 
@@ -34,14 +34,13 @@ public class TextSizePreference extends DialogPreference{
 
         SeekBar seekBar = (SeekBar) view.findViewById(R.id.textSizeSeekBar);
         seekBar.setProgress(seekBarValue);
-        //seekBar.setMax(120);
         changeText(view);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if(b) {
-                    TextSizePreference.this.seekBarValue = i;
+                    seekBarValue = i;
                     changeText(view);
                 }
             }
@@ -56,17 +55,12 @@ public class TextSizePreference extends DialogPreference{
         return view;
     }
 
-    @Override
-    protected void onDialogClosed(boolean positiveResult) {
-        super.onDialogClosed(positiveResult);
-    }
-
-    protected static int getValue() {
+    static int getValue() {
         return seekBarValue + 100;
     }
 
-    protected void changeText(View view) {
+    private void changeText(View view) {
         TextView tV = (TextView)view.findViewById(R.id.textSizeText);
-        tV.setText(Integer.toString(seekBarValue));
+        tV.setText(Integer.toString(getValue()));
     }
 }

@@ -6,7 +6,8 @@
 
         <ListPreference
             android:key="textType"
-            android:title="Select text appearance"
+            android:title="Text appearance"
+            android:summary="Change text appearance"
             android:defaultValue="1"
             android:entries="@array/textTypes"
             android:entryValues="@array/textTypeValues" />
@@ -14,16 +15,25 @@
         <ListPreference
             android:key="textTypeface"
             android:title="Change typography"
+            android:summary="Change time text typography"
             android:defaultValue="1"
             android:entries="@array/textTypefaces"
             android:entryValues="@array/textTypefacesValues"/>
 
         <com.eneko.hexcolortimewallpaper.TextSizePreference
-            android:title="Text Size"/>
+            android:title="Text Size"
+            android:summary="Select time text size"/>
+
+        <SwitchPreference
+            android:key="invertColor"
+            android:title="Invert Colors"
+            android:summary="Invert background color"
+            android:defaultValue="false"/>
 
         <Preference
             android:key="applyWallpaper"
-            android:title="Apply!"/>
+            android:title="Apply!"
+            android:summary="Apply the Wallpaper"/>
 
     </PreferenceCategory>
 
