@@ -11,8 +11,9 @@ A simple Android live wallpaper which changes background color with the time col
 ### Screenshots
 <img src="https://github.com/jajasuperman/HexColorTime/blob/master/screenshots/shot1.png" width="300">
 <img src="https://github.com/jajasuperman/HexColorTime/blob/master/screenshots/shot3.png" width="300">
+<img src="https://github.com/jajasuperman/HexColorTime/blob/master/screenshots/shot2.png" width="300">
 
 ## About
 Feel free to contribute the project adding new stuff or translating ;)
 
-Under GPLv3
+Under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) license
