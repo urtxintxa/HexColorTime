@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HexColorTime Wallpaper</string>
+    <string name="appearanceTitle">Appearance</string>
+    <string name="textAppearance">Text appearance</string>
+    <string name="textAppearanceInfo">Change text appearance</string>
+    <string name="typography">Change typography</string>
+    <string name="typographyInfo">Change text typography</string>
+    <string name="textSize">Text Size</string>
+    <string name="textSizeInfo">Select text size</string>
+    <string name="invertColor">Invert Colors</string>
+    <string name="invertColorInfo">Invert background color</string>
+    <string name="apply">Apply!</string>
+    <string name="applyInfo">Apply the Wallpaper</string>
+
+    <string name="textType1">Date (20:21:22)</string>
+    <string name="textType2">Hex Color (#202122)</string>
 </resources>

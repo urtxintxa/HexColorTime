@@ -2,38 +2,38 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="Appearance">
+        android:title="@string/appearanceTitle">
 
         <ListPreference
             android:key="textType"
-            android:title="Text appearance"
-            android:summary="Change text appearance"
+            android:title="@string/textAppearance"
+            android:summary="@string/textAppearanceInfo"
             android:defaultValue="1"
             android:entries="@array/textTypes"
             android:entryValues="@array/textTypeValues" />
 
         <ListPreference
             android:key="textTypeface"
-            android:title="Change typography"
-            android:summary="Change time text typography"
+            android:title="@string/typography"
+            android:summary="@string/typographyInfo"
             android:defaultValue="1"
             android:entries="@array/textTypefaces"
             android:entryValues="@array/textTypefacesValues"/>
 
         <com.eneko.hexcolortimewallpaper.TextSizePreference
-            android:title="Text Size"
-            android:summary="Select time text size"/>
+            android:title="@string/textSize"
+            android:summary="@string/textSizeInfo"/>
 
         <SwitchPreference
             android:key="invertColor"
-            android:title="Invert Colors"
-            android:summary="Invert background color"
+            android:title="@string/invertColor"
+            android:summary="@string/invertColorInfo"
             android:defaultValue="false"/>
 
         <Preference
             android:key="applyWallpaper"
-            android:title="Apply!"
-            android:summary="Apply the Wallpaper"/>
+            android:title="@string/apply"
+            android:summary="@string/applyInfo"/>
 
     </PreferenceCategory>
 

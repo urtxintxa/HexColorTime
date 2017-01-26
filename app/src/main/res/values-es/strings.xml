@@ -1,0 +1,16 @@
+<resources>
+    <string name="appearanceTitle">Apariencia</string>
+    <string name="textAppearance">Apariencia del texto</string>
+    <string name="textAppearanceInfo">Cambiar la apariencia del texto</string>
+    <string name="typography">Cambiar Tipografia</string>
+    <string name="typographyInfo">Cambia la tipografia del texto</string>
+    <string name="textSize">Tamaño Texto</string>
+    <string name="textSizeInfo">Selecciona el tamaño del texto</string>
+    <string name="invertColor">Invertir Color</string>
+    <string name="invertColorInfo">Invertir el color de fondo</string>
+    <string name="apply">Aplicar!</string>
+    <string name="applyInfo">Aplicar el Fondo de Pantalla</string>
+
+    <string name="textType1">Fecha (20:21:22)</string>
+    <string name="textType2">Color Hex (#202122)</string>
+</resources>

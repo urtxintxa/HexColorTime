@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="textTypes">
-        <item>Date (20:21:22)</item>
-        <item>Hex Color (#202122)</item>
+        <item>@string/textType1</item>
+        <item>@string/textType2</item>
     </string-array>
     <string-array name="textTypeValues">
         <item>1</item>
