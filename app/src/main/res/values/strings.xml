@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HexColorTime Wallpaper</string>
+    <string name="app_name" translatable="false">HexColorTime Wallpaper</string>
     <string name="appearanceTitle">Appearance</string>
     <string name="textAppearance">Text appearance</string>
     <string name="textAppearanceInfo">Change text appearance</string>
