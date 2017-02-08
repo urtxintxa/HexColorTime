@@ -1,9 +1,13 @@
 # HexColorTime
 
-A simple Android live wallpaper which changes background color with the time color in hex
+A simple Android live wallpaper which changes background color with the time color in hex.
+
+[<img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="80">](https://f-droid.org/app/com.eneko.hexcolortimewallpaper)
 
 ### Features
-* Two text appearances: time (20:21:23) or hex color (#202123)
+* Three text appearances: time (20:21:23), hex color (#202123) or no text
 * Change typography (Default, Default Bold, Monospace, Sans Serif or Serif)
 * Change text size
 * Invert colors
