@@ -3,14 +3,16 @@
     <string-array name="textTypes">
         <item>@string/textType1</item>
         <item>@string/textType2</item>
+        <item>@string/textType3</item>
     </string-array>
     <string-array name="textTypeValues">
         <item>1</item>
         <item>2</item>
+        <item>3</item>
     </string-array>
 
     <string-array name="textTypefaces">
-        <item>Default</item>
+        <item>@string/defaultTypo</item>
         <item>Default Bold</item>
         <item>Monospace</item>
         <item>Sans Serif</item>

@@ -124,21 +124,24 @@ public class Wallpaper extends WallpaperService{
         }
 
         private String getTimeText(Calendar ca) {
-            String textType = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("textType", "");
+            String textType = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("textType", "1");
             if(textType.equals("1")) {
                 DateFormat df = new SimpleDateFormat("HH:mm:ss");
                 return df.format(Calendar.getInstance().getTime());
             }
-            else {
+            else if(textType.equals("2")){
                 return "#" +
                         String.format("%02d", ca.get(Calendar.HOUR_OF_DAY)) +
                         String.format("%02d", ca.get(Calendar.MINUTE)) +
                         String.format("%02d", ca.get(Calendar.SECOND));
             }
+            else {
+                return "";
+            }
         }
 
         private Typeface getTypeface() {
-            String textTypeface = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("textTypeface", "");
+            String textTypeface = PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getString("textTypeface", "1");
 
             switch (Integer.parseInt(textTypeface)) {
                 default:
