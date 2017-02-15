@@ -1,0 +1,18 @@
+<resources>
+    <string name="appearanceTitle">Вид</string>
+    <string name="textAppearance">Вид текста</string>
+    <string name="textAppearanceInfo">Изменить вид текста</string>
+    <string name="typography">Изменить стиль шрифта</string>
+    <string name="typographyInfo">Изменить стиль текста</string>
+    <string name="textSize">Размер текста</string>
+    <string name="textSizeInfo">Выбрать размер текста</string>
+    <string name="invertColor">Инверсировать цвета</string>
+    <string name="invertColorInfo">Применить фон рабочего стола</string>
+    <string name="apply">Применить</string>
+    <string name="applyInfo">Применить фон</string>
+
+    <string name="textType1">Дата (20:21:22)</string>
+    <string name="textType2">Шестнадцатеричный цвет (#202122)</string>
+    <string name="textType3">Без текста</string>
+    <string name="defaultTypo">По умолчанию</string>
+</resources>
